@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-image: linear-gradient(
+		to bottom right,
+		var(--heliotrope-gray),
+		var(--isabelline)
+	);
+	min-height: 100vh;
+}
+.title {
+	padding: 2rem;
+	margin-top: 5rem;
+	font-size: 3rem;
+	font-family: "Poppins", sans-serif;
+}
+.or-symbol {
+	color: var(--persian-blue);
+	font-size: 3rem;
+	text-shadow: 0 0 5px var(--space-cadet);
+}
+.title__name {
+	font-size: 3.5rem;
+	display: inline-block;
+	font-weight: 700;
+	background-image: linear-gradient(
+		150deg,
+		var(--space-cadet) 0%,
+		var(--space-cadet) 50%,
+		var(--independence) 50%
+	);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.title__role {
+	font-weight: 600;
+	font-size: 2.2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-links {
+	transform: translate(-150%, -150%);
+	margin-top: 15rem;
+	position: relative;
+	padding: 3rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-links:hover .image {
+	transform: scale(0.9);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.img--1 {
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0%;
 }
-
-.App-link {
-  color: #61dafb;
+.img--2 {
+	position: absolute;
+	z-index: 10;
+	left: 7rem;
+	top: 85%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img--3 {
+	position: absolute;
+	z-index: 20;
+	right: -5rem;
+	top: 70%;
+}
+.image {
+	transition: all 0.3s ease;
+	border-radius: 3px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+	height: 16rem;
+	width: auto;
+}
+.img:hover {
+	z-index: 30;
+}
+.img:hover .image {
+	transform: scale(1.2);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
