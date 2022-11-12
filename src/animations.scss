@@ -1,0 +1,79 @@
+// re-usable animations
+@keyframes squeezeOut {
+	0% {
+		transform: scaleY(0.1);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+@keyframes dashOut {
+	0% {
+		opacity: 0;
+		transform: translate(-100%, -50%);
+	}
+	100% {
+		opacity: 0.95;
+		transform: translateY(-50%);
+	}
+}
+@keyframes growLeft {
+	0% {
+		width: 0px;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes descend {
+	0% {
+		transform: translateY(-2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes ascend {
+	0% {
+		transform: translateY(2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes fadeInFromLeft {
+	0% {
+		transform: translateX(-2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes fadeInFromRight {
+	0% {
+		transform: translateX(2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+// specific for the alert window
+@keyframes alertOut {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 3rem);
+	}
+	100% {
+		opacity: 0.85;
+		transform: translate(-50%, -50%);
+	}
+}

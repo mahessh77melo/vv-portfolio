@@ -1,0 +1,93 @@
+@import "variables";
+@import "animations";
+
+.projects {
+	min-height: 100vh;
+	background-image: url("https://images.unsplash.com/photo-1544273677-c433136021d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 6rem;
+}
+
+.project {
+	background-color: $trans-white;
+	border-radius: 3px;
+	padding: 2rem;
+	width: 50vw;
+	margin: 2rem;
+	box-shadow: $shadow-subtle;
+	display: grid;
+	transition: all 0.2s ease-in;
+	grid-template-rows: max-content max-content;
+	grid-row-gap: 2rem;
+	grid-template-columns: 3fr 1fr;
+	@media only screen and (max-width: $bp-largest) {
+		width: 60vw;
+	}
+	@media only screen and (max-width: $bp-large) {
+		width: 75vw;
+	}
+	@media only screen and (max-width: $bp-medium) {
+		width: 95vw;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		grid-row: 1/2;
+		@media only screen and (max-width: $bp-medium) {
+			font-size: 2rem;
+		}
+	}
+	&__domain {
+		grid-row: 1/2;
+		font-size: 2rem;
+		@media only screen and (max-width: $bp-medium) {
+			font-size: 1.6rem;
+		}
+	}
+	&__link {
+		.MuiSvgIcon-root {
+			font-size: 3rem;
+			margin: 1rem;
+			display: inline-block;
+			color: $github-dark;
+			filter: drop-shadow($shadow-mini);
+		}
+	}
+	&__links {
+		display: flex;
+		align-items: space-around;
+		justify-content: flex-start;
+		.link-web .MuiSvgIcon-root {
+			color: $purple;
+		}
+	}
+
+	&__tools {
+		grid-row: 2/3;
+		display: flex;
+		color: $dark-grey;
+		font-size: 1.4rem;
+		align-self: center;
+		@media only screen and (max-width: $bp-small) {
+			flex-wrap: wrap;
+			font-size: 1.2rem;
+		}
+
+		&-item {
+			padding: 0.5rem 1rem;
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+			border-radius: 20px;
+			border: 2px solid $dark-grey;
+		}
+	}
+
+	&:hover {
+		box-shadow: 0 0.8rem 1rem rgba($purple, 0.85);
+		transform: translateY(-0.75rem);
+	}
+}
